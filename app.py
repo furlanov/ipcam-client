@@ -1,11 +1,14 @@
+from PIL import Image, ImageTk
+from dotenv import load_dotenv
+from io import BytesIO
 import tkinter as tk
 import requests
-from PIL import Image, ImageTk
-from io import BytesIO
+import os
 
-url = ""
-username = ""
-password = ""
+load_dotenv()
+url = os.getenv("url")
+username = os.getenv("username")
+password = os.getenv("password")
 
 window = tk.Tk()
 window.title("SCam")
